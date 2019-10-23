@@ -11,7 +11,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, staff_login_required
 
-
+#this is a branch test
 # Configure application create an instance of a flask app
 app = Flask(__name__)
 
