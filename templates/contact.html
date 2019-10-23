@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-center"><span>Contact us</span></h1>
+
+    <p>Please contact us to arrange a visit or to ask a question</p>
+
+     <form action="/contact" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="first_name" placeholder="First Name" type="text" oninvalid="this.setCustomValidity('Please enter your first name')" required=""
+            oninput="setCustomValidity('')">
+
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="last_name" placeholder="Last Name" type="text" oninvalid="this.setCustomValidity('Please enter your last name')" required=""
+            oninput="setCustomValidity('')">
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Enter email address" oninvalid="this.setCustomValidity('Please enter your email address')" required=""
+            oninput="setCustomValidity('')">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="phone" placeholder="Enter phone number" type="text" oninvalid="this.setCustomValidity('Please enter your phone number')" required=""
+            oninput="setCustomValidity('')">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="child_name" placeholder="Child's name" type="text" oninvalid="this.setCustomValidity('Please enter your child's name)" required=""
+            oninput="setCustomValidity('')">
+        </div>
+        <div class="form-group">
+            <div><label>Child's Date of birth</label></div>
+            <input class="form-control" name="child_age" placeholder="Date of Birth" type="date" value="2019-08-19" required>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="sessions" placeholder="Sessions required" type="number" oninvalid="this.setCustomValidity('Please enter the amount of sessions you would like')" required=""
+            oninput="setCustomValidity('')">
+        </div>
+
+        <div class="form-group">
+
+            <textarea class="form-control" name="message" placeholder="Message"rows="5" oninvalid="this.setCustomValidity('Please describe your reason for contact')" required=""
+            oninput="setCustomValidity('')"></textarea>
+        </div>
+
+         <div class="form-group">
+             <select class="form-control" name="data">
+                 <option disabled selected value="search_engine">How did you hear about us?</option>
+                 <option value="search_engine">Search Engine</option>
+                 <option value="friends_family">Friends and Family</option>
+                 <option value="Social media">Social Media</option>
+                 <option value="childcare">Other childcare recommendations</option>
+              </select>
+        </div>
+
+        <button class="btn btn-primary" type="register">Contact us</button>
+    </form>
+
+{% endblock %}

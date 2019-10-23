@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Admin Dashboard
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="text-center"><span>Little Stars</span> Staff Dashboard</h1>
+    <h2 class="text-center">Children's details</h2>
+  <body id="homepage">
+         <! table titles-->
+    <table class="table table-striped" style="width:100%">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Date of Birth</th>
+        <th>Illness</th>
+        <th>Allergies</th>
+        <th>Emergency contact Number</th>
+        <th>Age</th>
+      <! table content-->
+      </tr>
+      {% for staff_child_details in staff_child_detail %}
+      <tr>
+        <td>{{ staff_child_details.first_name }}</td>
+        <td>{{ staff_child_details.last_name }}</td>
+        <td>{{ staff_child_details.child_age }}</td>
+        <td>{{ staff_child_details.illness }}</td>
+        <td>{{ staff_child_details.allergies }}</td>
+        <td>{{ staff_child_details.phone }}</td>
+        <td>{{ staff_child_details.Age }}</td>
+      {% endfor %}
+ </tr>
+      </table>
+   </body>
+{% endblock %}

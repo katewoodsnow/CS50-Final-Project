@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    child_detail
+{% endblock %}
+
+{% block main %}
+    <! table titles-->
+    <table class="table table-striped" style="width:100%">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Date of Birth</th>
+        <th>Illness</th>
+        <th>Allergies</th>
+        <th>Emergency contact Number</th>
+        <th>Age</th>
+      <! table content-->
+      </tr>
+      {% for child_details in child_detail %}
+      <tr>
+        <td>{{ child_details.first_name }}</td>
+        <td>{{ child_details.last_name }}</td>
+        <td>{{ child_details.child_age }}</td>
+        <td>{{ child_details.illness }}</td>
+        <td>{{ child_details.allergies }}</td>
+        <td>{{ child_details.phone }}</td>
+        <td>{{ child_details.Age }}</td>
+
+        {% endfor %}
+ </tr>
+      </table>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+	    {% with messages = get_flashed_messages() %}
+	      {% if messages %}
+                    <span>{{ message }}</span>
+                    </button>
+	      {% endif %}
+	    {% endwith %}
+
+	{% block body %}{% endblock %}
+
+    <h1 class="text-center"><span>Little Stars</span> Pre-school</h1>
+    <h2 class="text-center">Barton-Under-Needwood</h2>
+  <body id="homepage">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+         We aim to provide the highest quality care and education for all our children by offering a well planned curriculum
+         which builds on developing skills and interests in a relaxed and friendly environment.
+   </div>
+    </div>
+   </body>
+    <form action="/contact">
+         <button type="submit">Book a visit</button>
+      </form>
+
+
+{% endblock %}

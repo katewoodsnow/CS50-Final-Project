@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pricing
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-center"><span>Price List</span></h1>
+    <h2 class="text-center">2019/2020</h2>
+  <body id="pricing">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+        <h3 id = "pricingsubtitle">Hourly rate</h3>
+        <p id = "pricingparagraph">£6 per hour</P>
+        <h3 id = "pricingsubtitle">Government funded 15 hours and 30 hours for 2/3/4 year olds</h3>
+        <p id = "pricingparagraph">Available</p>
+        <h3 id = "pricingsubtitle">Extra charges</h3>
+        <p id = "pricingparagraph"> 60p per day for snacks</p>
+        <h3 id = "pricingsubtitle">Lunch</h3>
+        <p id = "pricingparagraph">No lunch provided, please bring own packed lunch</p>
+        <p>We promote healthy eating and advise all parents to provide a healthy lunch</p>
+   </div>
+    </div>
+   </body>
+    <form action="/contact">
+         <button type="submit">Book a visit</button>
+      </form>
+
+
+{% endblock %}

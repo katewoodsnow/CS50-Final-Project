@@ -1,0 +1,23 @@
+{% block title %}
+    Staff login
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-center"><span>Little Stars</span> Pre-school</h1>
+    <h2 class="text-center">Barton-Under-Needwood</h2>
+  <body id="admin">
+    <form action="/staff_login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Staff Log In</button>
+
+         <p>Not yet registered? <a href="/register_staff">Register</a></p>
+    </form>
+   </body>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register Child
+{% endblock %}
+
+{% block main %}
+    <form action="/register_child" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="first_name" placeholder="First Name" type="text"  oninvalid="this.setCustomValidity('Please enter a first name')" required=""
+                oninput="setCustomValidity('')">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="last_name" placeholder="Last Name" type="text" oninvalid="this.setCustomValidity('Please enter a last name')" required=""
+                oninput= "setCustomValidity('')">
+        </div>
+        <div class="form-group">
+            <div><label>Date of birth</label></div>
+            <input class="form-control" name="child_age" placeholder="Date of Birth" type="date" value="2019-08-19" oninvalid="this.setCustomValidity('Please enter child's date of birth)" required=""
+                oninput= "setCustomValidity('')">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="illness" placeholder="Illnesses" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="allergies" placeholder="Allergies" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="phone" placeholder="Emergency Contact Number</e>" type="text" oninvalid="this.setCustomValidity('Please enter an emergency contact number)" required=""
+                oninput= "setCustomValidity('')">
+        </div>
+
+        <button class="btn btn-primary" type="register">Register</button>
+    </form>
+{% endblock %}
